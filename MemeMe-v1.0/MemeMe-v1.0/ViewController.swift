@@ -18,12 +18,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var bottomText: UITextField!
     
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     //MARK: Life-cycle
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        shareButton.enabled = false
         
         topText.text = "TOP"
         topText.textAlignment = .Center
@@ -78,12 +81,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.presentViewController(pickerController, animated: true, completion: nil)
     }
     
+    @IBAction func shareMeme(sender: UIBarButtonItem) {
+    }
+    
+    
     //MARK: Delegate methods
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.imagePickerView.image = image
+            shareButton.enabled = true
             self.dismissViewControllerAnimated(true, completion: {})
         }
     }

@@ -51,7 +51,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <animations/>
                                 <items>
-                                    <barButtonItem title="Share" id="92w-pg-28g"/>
+                                    <barButtonItem title="Share" id="92w-pg-28g">
+                                        <connections>
+                                            <action selector="shareMeme:" destination="BYZ-38-t0r" id="AsK-Co-xLX"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="18" width="400" height="44"/>
@@ -124,6 +128,7 @@
                     <connections>
                         <outlet property="bottomText" destination="JfJ-zH-UlB" id="8xa-jY-wGz"/>
                         <outlet property="imagePickerView" destination="LZH-aK-aVJ" id="t0v-wO-BGe"/>
+                        <outlet property="shareButton" destination="92w-pg-28g" id="Nn6-Fe-0nF"/>
                         <outlet property="topText" destination="QV8-8y-KTp" id="fKh-7P-ZUw"/>
                     </connections>
                 </viewController>
