@@ -48,6 +48,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.unsubscribeFromKeyboardNotifications()
     }
     
+    
     //MARK: Globals
     
     let memeTextAttributes = [

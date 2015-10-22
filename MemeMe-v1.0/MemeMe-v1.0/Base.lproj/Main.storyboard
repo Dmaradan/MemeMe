@@ -26,11 +26,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <animations/>
                                 <items>
-                                    <barButtonItem title="Pick" id="HX2-nT-z08">
+                                    <barButtonItem title="Album" id="HX2-nT-z08">
                                         <connections>
                                             <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" id="Ac1-LS-G8i"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="255" style="plain" systemItem="fixedSpace" id="q8Z-Ta-Dcs"/>
+                                    <barButtonItem title="Camera" id="xeJ-au-dbG"/>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QV8-8y-KTp">
@@ -45,14 +47,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-yg-WS9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Share" id="92w-pg-28g"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="18" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QV8-8y-KTp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="6Gg-Hg-1lB"/>
+                            <constraint firstItem="QV8-8y-KTp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="6Gg-Hg-1lB"/>
                             <constraint firstItem="JfJ-zH-UlB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8ly-42-omj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LZH-aK-aVJ" secondAttribute="trailing" constant="60" id="GLn-oK-EgF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zm6-GW-4YX" secondAttribute="trailing" constant="-20" id="Q3G-V3-8zi"/>
+                            <constraint firstItem="zm6-GW-4YX" firstAttribute="top" secondItem="LZH-aK-aVJ" secondAttribute="bottom" constant="10" id="Lu0-hc-Qf6"/>
                             <constraint firstItem="zm6-GW-4YX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Vmx-Fe-XWf"/>
                             <constraint firstItem="QV8-8y-KTp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xj1-uh-Zoo"/>
                             <constraint firstItem="zm6-GW-4YX" firstAttribute="top" secondItem="LZH-aK-aVJ" secondAttribute="bottom" constant="10" id="d9i-T9-vZA"/>
@@ -60,6 +72,7 @@
                             <constraint firstItem="LZH-aK-aVJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="kEo-XF-ENg"/>
                             <constraint firstItem="LZH-aK-aVJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="pr9-Np-pmE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JfJ-zH-UlB" secondAttribute="bottom" constant="100" id="tTA-43-RgN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zm6-GW-4YX" secondAttribute="trailing" constant="-20" id="z1c-z5-fu7"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -67,19 +80,21 @@
                                 <exclude reference="zm6-GW-4YX"/>
                                 <exclude reference="QV8-8y-KTp"/>
                                 <exclude reference="JfJ-zH-UlB"/>
+                                <exclude reference="wZ8-yg-WS9"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="j1a-VR-mAu"/>
-                                <exclude reference="tTA-43-RgN"/>
-                                <exclude reference="8ly-42-omj"/>
-                                <exclude reference="6Gg-Hg-1lB"/>
-                                <exclude reference="Xj1-uh-Zoo"/>
-                                <exclude reference="Q3G-V3-8zi"/>
-                                <exclude reference="Vmx-Fe-XWf"/>
-                                <exclude reference="d9i-T9-vZA"/>
                                 <exclude reference="GLn-oK-EgF"/>
                                 <exclude reference="kEo-XF-ENg"/>
                                 <exclude reference="pr9-Np-pmE"/>
+                                <exclude reference="6Gg-Hg-1lB"/>
+                                <exclude reference="Xj1-uh-Zoo"/>
+                                <exclude reference="8ly-42-omj"/>
+                                <exclude reference="Lu0-hc-Qf6"/>
+                                <exclude reference="Vmx-Fe-XWf"/>
+                                <exclude reference="d9i-T9-vZA"/>
+                                <exclude reference="z1c-z5-fu7"/>
+                                <exclude reference="j1a-VR-mAu"/>
+                                <exclude reference="tTA-43-RgN"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -88,19 +103,21 @@
                                 <include reference="zm6-GW-4YX"/>
                                 <include reference="QV8-8y-KTp"/>
                                 <include reference="JfJ-zH-UlB"/>
+                                <include reference="wZ8-yg-WS9"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="j1a-VR-mAu"/>
-                                <include reference="tTA-43-RgN"/>
-                                <include reference="8ly-42-omj"/>
-                                <include reference="6Gg-Hg-1lB"/>
-                                <include reference="Xj1-uh-Zoo"/>
-                                <include reference="Q3G-V3-8zi"/>
-                                <include reference="Vmx-Fe-XWf"/>
-                                <include reference="d9i-T9-vZA"/>
                                 <include reference="GLn-oK-EgF"/>
                                 <include reference="kEo-XF-ENg"/>
                                 <include reference="pr9-Np-pmE"/>
+                                <include reference="6Gg-Hg-1lB"/>
+                                <include reference="Xj1-uh-Zoo"/>
+                                <include reference="8ly-42-omj"/>
+                                <include reference="Lu0-hc-Qf6"/>
+                                <include reference="Vmx-Fe-XWf"/>
+                                <include reference="d9i-T9-vZA"/>
+                                <include reference="z1c-z5-fu7"/>
+                                <include reference="j1a-VR-mAu"/>
+                                <include reference="tTA-43-RgN"/>
                             </mask>
                         </variation>
                     </view>
