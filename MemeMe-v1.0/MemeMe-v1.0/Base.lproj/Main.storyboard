@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe_v1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LZH-aK-aVJ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zm6-GW-4YX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Pick" id="HX2-nT-z08">
+                                        <connections>
+                                            <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" id="Ac1-LS-G8i"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QV8-8y-KTp">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfJ-zH-UlB">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QV8-8y-KTp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="6Gg-Hg-1lB"/>
+                            <constraint firstItem="JfJ-zH-UlB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8ly-42-omj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LZH-aK-aVJ" secondAttribute="trailing" constant="60" id="GLn-oK-EgF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zm6-GW-4YX" secondAttribute="trailing" constant="-20" id="Q3G-V3-8zi"/>
+                            <constraint firstItem="zm6-GW-4YX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Vmx-Fe-XWf"/>
+                            <constraint firstItem="QV8-8y-KTp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xj1-uh-Zoo"/>
+                            <constraint firstItem="zm6-GW-4YX" firstAttribute="top" secondItem="LZH-aK-aVJ" secondAttribute="bottom" constant="10" id="d9i-T9-vZA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zm6-GW-4YX" secondAttribute="bottom" id="j1a-VR-mAu"/>
+                            <constraint firstItem="LZH-aK-aVJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="kEo-XF-ENg"/>
+                            <constraint firstItem="LZH-aK-aVJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="pr9-Np-pmE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JfJ-zH-UlB" secondAttribute="bottom" constant="100" id="tTA-43-RgN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LZH-aK-aVJ"/>
+                                <exclude reference="zm6-GW-4YX"/>
+                                <exclude reference="QV8-8y-KTp"/>
+                                <exclude reference="JfJ-zH-UlB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="j1a-VR-mAu"/>
+                                <exclude reference="tTA-43-RgN"/>
+                                <exclude reference="8ly-42-omj"/>
+                                <exclude reference="6Gg-Hg-1lB"/>
+                                <exclude reference="Xj1-uh-Zoo"/>
+                                <exclude reference="Q3G-V3-8zi"/>
+                                <exclude reference="Vmx-Fe-XWf"/>
+                                <exclude reference="d9i-T9-vZA"/>
+                                <exclude reference="GLn-oK-EgF"/>
+                                <exclude reference="kEo-XF-ENg"/>
+                                <exclude reference="pr9-Np-pmE"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="LZH-aK-aVJ"/>
+                                <include reference="zm6-GW-4YX"/>
+                                <include reference="QV8-8y-KTp"/>
+                                <include reference="JfJ-zH-UlB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="j1a-VR-mAu"/>
+                                <include reference="tTA-43-RgN"/>
+                                <include reference="8ly-42-omj"/>
+                                <include reference="6Gg-Hg-1lB"/>
+                                <include reference="Xj1-uh-Zoo"/>
+                                <include reference="Q3G-V3-8zi"/>
+                                <include reference="Vmx-Fe-XWf"/>
+                                <include reference="d9i-T9-vZA"/>
+                                <include reference="GLn-oK-EgF"/>
+                                <include reference="kEo-XF-ENg"/>
+                                <include reference="pr9-Np-pmE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bottomText" destination="JfJ-zH-UlB" id="8xa-jY-wGz"/>
+                        <outlet property="imagePickerView" destination="LZH-aK-aVJ" id="t0v-wO-BGe"/>
+                        <outlet property="topText" destination="QV8-8y-KTp" id="fKh-7P-ZUw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="315"/>
+        </scene>
+    </scenes>
+</document>
