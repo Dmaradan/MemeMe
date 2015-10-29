@@ -81,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomText" destination="AMT-u6-dvG" id="ZQr-MY-bft"/>
+                        <outlet property="camButton" destination="ndK-Bs-7Q8" id="mxl-zY-Ld8"/>
                         <outlet property="imagePickerView" destination="H3G-CQ-mLK" id="V5b-Rv-KuJ"/>
                         <outlet property="shareButton" destination="dbe-WM-fv7" id="SjF-AN-G0k"/>
                         <outlet property="topText" destination="xQO-Gd-8qa" id="bnU-LL-18j"/>

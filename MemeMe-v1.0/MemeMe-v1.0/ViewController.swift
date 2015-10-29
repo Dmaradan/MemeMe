@@ -20,6 +20,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
+    @IBOutlet weak var camButton: UIBarButtonItem!
+    
     //MARK: Life-cycle
     
     
@@ -44,6 +46,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.subscribeToKeyboardNotifications()
+        
+        //disable camera button if device does not support it
+        camButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
     }
     
     override func viewWillDisappear(animated: Bool) {
