@@ -94,7 +94,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         presentViewController(activityVC, animated: true, completion: {
             self.save()
-            self.dismissViewControllerAnimated(true, completion: nil)
         })
     }
     
@@ -168,7 +167,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func generateMemedImage() -> UIImage
     {
-        // TODO: Hide toolbar and navbar
         
         // Render view to an image
         UIGraphicsBeginImageContext(view.frame.size)
@@ -178,7 +176,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        // TODO:  Show toolbar and navbar
         
         return memedImage
     }
