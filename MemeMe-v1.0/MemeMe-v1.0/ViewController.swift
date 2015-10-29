@@ -82,6 +82,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func shareMeme(sender: UIBarButtonItem) {
+        
+        let image = generateMemedImage()
+        let activityItems = [image]
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        
+        presentViewController(activityVC, animated: true, completion: {
+            self.save()
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
     }
     
     
