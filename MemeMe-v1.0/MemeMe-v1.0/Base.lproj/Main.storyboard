@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <animations/>
                                 <items>
-                                    <barButtonItem title="Share" id="dbe-WM-fv7">
+                                    <barButtonItem systemItem="action" id="dbe-WM-fv7">
                                         <connections>
                                             <action selector="shareMeme:" destination="BYZ-38-t0r" id="BJI-8C-E4w"/>
                                         </connections>
