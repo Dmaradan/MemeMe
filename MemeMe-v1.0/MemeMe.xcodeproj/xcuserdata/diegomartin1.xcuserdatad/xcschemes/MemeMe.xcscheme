@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CA7DC27E1BD8640600265BC5"
-               BuildableName = "MemeMe-v1.0.app"
-               BlueprintName = "MemeMe-v1.0"
-               ReferencedContainer = "container:MemeMe-v1.0.xcodeproj">
+               BuildableName = "MemeMe.app"
+               BlueprintName = "MemeMe"
+               ReferencedContainer = "container:MemeMe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CA7DC2921BD8640600265BC5"
-               BuildableName = "MemeMe-v1.0Tests.xctest"
-               BlueprintName = "MemeMe-v1.0Tests"
-               ReferencedContainer = "container:MemeMe-v1.0.xcodeproj">
+               BuildableName = "MemeMe.xctest"
+               BlueprintName = "MemeMeTests"
+               ReferencedContainer = "container:MemeMe.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CA7DC29D1BD8640700265BC5"
-               BuildableName = "MemeMe-v1.0UITests.xctest"
-               BlueprintName = "MemeMe-v1.0UITests"
-               ReferencedContainer = "container:MemeMe-v1.0.xcodeproj">
+               BuildableName = "MemeMe.xctest"
+               BlueprintName = "MemeMeUITests"
+               ReferencedContainer = "container:MemeMe.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA7DC27E1BD8640600265BC5"
-            BuildableName = "MemeMe-v1.0.app"
-            BlueprintName = "MemeMe-v1.0"
-            ReferencedContainer = "container:MemeMe-v1.0.xcodeproj">
+            BuildableName = "MemeMe.app"
+            BlueprintName = "MemeMe"
+            ReferencedContainer = "container:MemeMe.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA7DC27E1BD8640600265BC5"
-            BuildableName = "MemeMe-v1.0.app"
-            BlueprintName = "MemeMe-v1.0"
-            ReferencedContainer = "container:MemeMe-v1.0.xcodeproj">
+            BuildableName = "MemeMe.app"
+            BlueprintName = "MemeMe"
+            ReferencedContainer = "container:MemeMe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA7DC27E1BD8640600265BC5"
-            BuildableName = "MemeMe-v1.0.app"
-            BlueprintName = "MemeMe-v1.0"
-            ReferencedContainer = "container:MemeMe-v1.0.xcodeproj">
+            BuildableName = "MemeMe.app"
+            BlueprintName = "MemeMe"
+            ReferencedContainer = "container:MemeMe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
