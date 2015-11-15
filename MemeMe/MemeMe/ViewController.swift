@@ -189,7 +189,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Add it to the memes array in the Application Delegate
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
-        appDelegate.memes.append(meme)
+        SentMemes.add(meme)
     }
 }
 
