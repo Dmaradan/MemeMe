@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    var originVC: String!
+    
     //MARK: Outlets
     
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -45,6 +47,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         subscribeToKeyboardNotifications()
         
         //disable camera button if device does not support it
@@ -92,10 +95,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let activityItems = [image]
         let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         
-        presentViewController(activityVC, animated: true, completion: {
-            self.save()
-        })
+        save()
+        
+        presentViewController(activityVC, animated: true, completion: nil)
+        //navigationController?.popToRootViewControllerAnimated(false)
+        
     }
+    
+    @IBAction func cancel(sender: AnyObject) {
+        
+        //dismissViewControllerAnimated(true, completion: nil)
+        if originVC == "tableView"{
+            
+            performSegueWithIdentifier("unwindMemeEditor", sender: sender)
+        } else {
+            
+            performSegueWithIdentifier("unwindMemeEditorToCollectionView", sender: sender)
+        }
+        
+    }
+    
     
     
     //MARK: Delegate methods
@@ -190,7 +209,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         SentMemes.add(meme)
-        dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

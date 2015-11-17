@@ -22,9 +22,9 @@ class SentMemesTableViewController: UITableViewController {
         tableView!.reloadData()
     }
     
-//    @IBAction func unwindMemeEditor(segue: UIStoryboardSegue) {
-//        tableView!.reloadData()
-//    }
+    @IBAction func unwindMemeEditor(segue: UIStoryboardSegue) {
+        
+    }
 
     // MARK: - Table view data source
     
@@ -60,13 +60,21 @@ class SentMemesTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let memeDetailVC = segue.destinationViewController as? DetailViewViewController
+        if segue.identifier == "showDetail" {
         
-        if let selectedMemeCell = sender as? MemeTableViewCell {
+            let memeDetailVC = segue.destinationViewController as? DetailViewViewController
+        
+            if let selectedMemeCell = sender as? MemeTableViewCell {
             
-            let indexPath = tableView.indexPathForCell(selectedMemeCell)!
-            let selectedMeme = SentMemes.allMemes[indexPath.row]
-            memeDetailVC!.meme = selectedMeme
+                let indexPath = tableView.indexPathForCell(selectedMemeCell)!
+                let selectedMeme = SentMemes.allMemes[indexPath.row]
+                memeDetailVC!.meme = selectedMeme
+            }
+        } else {
+            
+            let editorVC = segue.destinationViewController as? ViewController
+            
+            editorVC?.originVC = "tableView"
         }
 
     }
