@@ -190,6 +190,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         SentMemes.add(meme)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
 
