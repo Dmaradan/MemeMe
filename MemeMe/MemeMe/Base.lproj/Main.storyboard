@@ -106,9 +106,11 @@
                         <outlet property="imagePickerView" destination="H3G-CQ-mLK" id="V5b-Rv-KuJ"/>
                         <outlet property="shareButton" destination="dbe-WM-fv7" id="SjF-AN-G0k"/>
                         <outlet property="topText" destination="xQO-Gd-8qa" id="bnU-LL-18j"/>
+                        <segue destination="TJu-OU-6MZ" kind="unwind" unwindAction="unwindMemeEditor:" id="Lqq-7I-LL2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="TJu-OU-6MZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1192" y="1237"/>
         </scene>
@@ -177,25 +179,42 @@
             </objects>
             <point key="canvasLocation" x="448" y="898"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Sent Memes Table View Controller-->
         <scene sceneID="Ykp-94-zsH">
             <objects>
-                <tableViewController id="Kqs-Gk-Nca" sceneMemberID="viewController">
+                <tableViewController id="Kqs-Gk-Nca" customClass="SentMemesTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q4J-MZ-DAm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FRf-gB-Edf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableViewCell" id="FRf-gB-Edf" customClass="MemeTableViewCell" customModule="MemeMe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FRf-gB-Edf" id="kA4-jJ-U3f">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-K9-hy1">
+                                            <rect key="frame" x="8" y="-42" width="96" height="128"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="96" id="XuK-5q-fPR"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="SaF-K9-hy1" firstAttribute="centerY" secondItem="kA4-jJ-U3f" secondAttribute="centerY" id="EOr-UI-rpY"/>
+                                        <constraint firstItem="SaF-K9-hy1" firstAttribute="top" secondItem="kA4-jJ-U3f" secondAttribute="topMargin" constant="-50" id="ogO-Zb-ihP"/>
+                                        <constraint firstItem="SaF-K9-hy1" firstAttribute="leading" secondItem="kA4-jJ-U3f" secondAttribute="leadingMargin" id="xTK-JW-pBo"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="memeImageView" destination="SaF-K9-hy1" id="aOS-uw-CMr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
