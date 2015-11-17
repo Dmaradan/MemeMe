@@ -15,18 +15,6 @@ struct Meme {
     var image: UIImage
     var memedImage: UIImage
     
-//    static var allMemes: [Meme] {
-//        
-//        var memeArray = [Meme]()
-//        
-//        for m in SentMemes.getMemeArray().memes {
-//            memeArray.append(m)
-//        }
-//        
-//        return memeArray
-//    }
-
-    
     init(topText: String, bottomText: String, originalImage: UIImage, newImage: UIImage){
         top = topText
         bottom = bottomText
@@ -34,22 +22,6 @@ struct Meme {
         memedImage = newImage
     }
 }
-
-//extension Meme {
-//    
-//    //This extension adds static variable allMemes. An array of Meme objects
-//
-//    static var allMemes: [Meme] {
-//            
-//        var memeArray = [Meme]()
-//            
-//        for m in SentMemes.getMemeArray().memes {
-//            memeArray.append(m)
-//        }
-//            
-//        return memeArray
-//    }
-//}
 
 struct SentMemes {
     

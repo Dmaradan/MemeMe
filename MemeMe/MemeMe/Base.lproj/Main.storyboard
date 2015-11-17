@@ -53,7 +53,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCT-Kh-eHG">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WCT-Kh-eHG">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <animations/>
                                 <items>
@@ -112,7 +112,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="TJu-OU-6MZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="1237"/>
+            <point key="canvasLocation" x="1384" y="898"/>
+        </scene>
+        <!--Detail View View Controller-->
+        <scene sceneID="4bo-pj-MyK">
+            <objects>
+                <viewController id="nN5-bl-qM0" customClass="DetailViewViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XwY-39-Wvb"/>
+                        <viewControllerLayoutGuide type="bottom" id="FK7-eX-W18"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pw4-HB-rjX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ebE-tX-rRE">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ebE-tX-rRE" firstAttribute="top" secondItem="XwY-39-Wvb" secondAttribute="bottom" id="GnT-b5-THQ"/>
+                            <constraint firstAttribute="trailing" secondItem="ebE-tX-rRE" secondAttribute="trailing" id="Qbd-Y3-N2v"/>
+                            <constraint firstItem="ebE-tX-rRE" firstAttribute="bottom" secondItem="FK7-eX-W18" secondAttribute="top" id="R57-4Q-upD"/>
+                            <constraint firstItem="ebE-tX-rRE" firstAttribute="leading" secondItem="pw4-HB-rjX" secondAttribute="leading" id="b38-uU-AZV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailView" destination="ebE-tX-rRE" id="UeA-Mt-6QS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHg-lN-WZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="1608"/>
         </scene>
         <!--Sent Memes Collection View Controller-->
         <scene sceneID="PFg-0v-4h8">
@@ -156,6 +190,7 @@
                                 <connections>
                                     <outlet property="cellLabel" destination="hsk-xN-R8e" id="SAP-H6-jjH"/>
                                     <outlet property="memeImageView" destination="1dT-FO-bXw" id="Bz5-2S-aOa"/>
+                                    <segue destination="nN5-bl-qM0" kind="show" identifier="showDetail" id="izd-gf-xJS"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -193,7 +228,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FRf-gB-Edf" id="kA4-jJ-U3f">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-K9-hy1">
@@ -214,6 +249,7 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="memeImageView" destination="SaF-K9-hy1" id="aOS-uw-CMr"/>
+                                    <segue destination="nN5-bl-qM0" kind="show" identifier="showDetail" id="8e7-vi-1Ma"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -275,5 +311,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="HJs-U6-Oau"/>
+        <segue reference="8e7-vi-1Ma"/>
     </inferredMetricsTieBreakers>
 </document>

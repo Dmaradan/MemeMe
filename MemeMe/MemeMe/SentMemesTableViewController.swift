@@ -45,15 +45,30 @@ class SentMemesTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        
-        
         let meme = SentMemes.allMemes[indexPath.row]
-        
-        //cell.memeImageView.image = meme.memedImage
 
         cell.memeImageView.image = meme.memedImage
         
         return cell
+    }
+    
+    // MARK: Delegate methods
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("showDetail", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let memeDetailVC = segue.destinationViewController as? DetailViewViewController
+        
+        if let selectedMemeCell = sender as? MemeTableViewCell {
+            
+            let indexPath = tableView.indexPathForCell(selectedMemeCell)!
+            let selectedMeme = SentMemes.allMemes[indexPath.row]
+            memeDetailVC!.meme = selectedMeme
+        }
+
     }
     
 
