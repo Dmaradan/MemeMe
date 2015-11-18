@@ -182,20 +182,12 @@
                                             <rect key="frame" x="-42" y="25" width="240" height="128"/>
                                             <animations/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsk-xN-R8e">
-                                            <rect key="frame" x="41" y="34" width="42" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
                                 <connections>
-                                    <outlet property="cellLabel" destination="hsk-xN-R8e" id="SAP-H6-jjH"/>
                                     <outlet property="memeImageView" destination="1dT-FO-bXw" id="Bz5-2S-aOa"/>
                                     <segue destination="nN5-bl-qM0" kind="show" identifier="showDetail" id="izd-gf-xJS"/>
                                 </connections>
@@ -225,32 +217,32 @@
         <scene sceneID="Ykp-94-zsH">
             <objects>
                 <tableViewController id="Kqs-Gk-Nca" customClass="SentMemesTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q4J-MZ-DAm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="128" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q4J-MZ-DAm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableViewCell" id="FRf-gB-Edf" customClass="MemeTableViewCell" customModule="MemeMe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableViewCell" rowHeight="128" id="FRf-gB-Edf" customClass="MemeTableViewCell" customModule="MemeMe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FRf-gB-Edf" id="kA4-jJ-U3f">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="127.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-K9-hy1">
-                                            <rect key="frame" x="8" y="-42" width="96" height="128"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-K9-hy1">
+                                            <rect key="frame" x="8" y="0.0" width="240" height="128"/>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="96" id="XuK-5q-fPR"/>
+                                                <constraint firstAttribute="width" constant="70" id="XaR-FM-bOA"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="SaF-K9-hy1" firstAttribute="centerY" secondItem="kA4-jJ-U3f" secondAttribute="centerY" id="EOr-UI-rpY"/>
-                                        <constraint firstItem="SaF-K9-hy1" firstAttribute="top" secondItem="kA4-jJ-U3f" secondAttribute="topMargin" constant="-50" id="ogO-Zb-ihP"/>
-                                        <constraint firstItem="SaF-K9-hy1" firstAttribute="leading" secondItem="kA4-jJ-U3f" secondAttribute="leadingMargin" id="xTK-JW-pBo"/>
+                                        <constraint firstItem="SaF-K9-hy1" firstAttribute="leading" secondItem="kA4-jJ-U3f" secondAttribute="leadingMargin" id="0WK-aW-QcI"/>
+                                        <constraint firstItem="SaF-K9-hy1" firstAttribute="top" secondItem="kA4-jJ-U3f" secondAttribute="top" id="PlB-vG-XY8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="SaF-K9-hy1" secondAttribute="bottom" constant="-0.5" id="p9V-Ts-aMJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
