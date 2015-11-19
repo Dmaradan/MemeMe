@@ -12,6 +12,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var originVC: String!
     
+    var userEditing = false
+    
     //MARK: Outlets
     
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -31,18 +33,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         
         shareButton.enabled = false
-        
-        topText.text = "TOP"
-        topText.textAlignment = .Center
-        topText.delegate = self
-        topText.defaultTextAttributes = memeTextAttributes
-        
-        
-        
-        bottomText.text = "BOTTOM"
-        bottomText.textAlignment = .Center
-        bottomText.delegate = self
-        bottomText.defaultTextAttributes = memeTextAttributes
+        setText()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -57,6 +48,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+    }
+    
+    func setText() {
+        
+        let texts = [topText, bottomText]
+        
+        if userEditing == false {
+            
+            topText.text = "TOP"
+            bottomText.text = "BOTTOM"
+        }
+        
+        for text in texts {
+            
+            text.delegate = self
+            text.textAlignment = .Center
+            text.defaultTextAttributes = memeTextAttributes
+        }
     }
     
     
