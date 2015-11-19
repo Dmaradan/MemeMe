@@ -26,6 +26,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var camButton: UIBarButtonItem!
     
+    @IBOutlet weak var topToolbar: UIToolbar!
+    
+    @IBOutlet weak var bottomToolbar: UIToolbar!
+    
+    
     //MARK: Life-cycle
     
     
@@ -107,13 +112,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         save()
         
         presentViewController(activityVC, animated: true, completion: nil)
-        //navigationController?.popToRootViewControllerAnimated(false)
-        
     }
     
     @IBAction func cancel(sender: AnyObject) {
         
-        //dismissViewControllerAnimated(true, completion: nil)
         if originVC == "tableView"{
             
             performSegueWithIdentifier("unwindMemeEditor", sender: sender)
@@ -121,7 +123,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             performSegueWithIdentifier("unwindMemeEditorToCollectionView", sender: sender)
         }
-        
     }
     
     //MARK: Delegate methods
@@ -200,6 +201,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func generateMemedImage() -> UIImage
     {
         
+        // Hide nav and tool bar before rendering
+        hideBars(true)
+        
         // Render view to an image
         UIGraphicsBeginImageContext(view.frame.size)
         view.drawViewHierarchyInRect(view.frame,
@@ -208,22 +212,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
+        // Show nav and tool bar after rendering
+        hideBars(false)
         
         return memedImage
     }
     
-    func save() {
+    
+    func hideBars(toggle: Bool) {
         
-        // TODO: hide nav and tool bars before saving
+        navigationController?.navigationBarHidden = toggle
+        topToolbar.hidden = toggle
+        bottomToolbar.hidden = toggle
+    }
+    
+    func save() {
         
         // Create the meme
         let memedImage = generateMemedImage()
-        var meme = Meme(top: topText.text!, bottom: bottomText.text!, image: imagePickerView.image!, memedImage: memedImage)
+        let meme = Meme(top: topText.text!, bottom: bottomText.text!, image: imagePickerView.image!, memedImage: memedImage)
         
-        // Add it to the memes array in the Application Delegate
-        let object = UIApplication.sharedApplication().delegate
-        let appDelegate = object as! AppDelegate
+        // Store it in array
         SentMemes.add(meme)
+        
+        
     }
 }
 

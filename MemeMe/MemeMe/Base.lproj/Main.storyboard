@@ -108,10 +108,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bottomText" destination="AMT-u6-dvG" id="ZQr-MY-bft"/>
+                        <outlet property="bottomToolbar" destination="KY6-hv-Ue1" id="5gx-0N-ne0"/>
                         <outlet property="camButton" destination="ndK-Bs-7Q8" id="mxl-zY-Ld8"/>
                         <outlet property="imagePickerView" destination="H3G-CQ-mLK" id="V5b-Rv-KuJ"/>
                         <outlet property="shareButton" destination="dbe-WM-fv7" id="SjF-AN-G0k"/>
                         <outlet property="topText" destination="xQO-Gd-8qa" id="bnU-LL-18j"/>
+                        <outlet property="topToolbar" destination="WCT-Kh-eHG" id="2UD-ZG-6Gk"/>
                         <segue destination="TJu-OU-6MZ" kind="unwind" identifier="unwindMemeEditor" unwindAction="unwindMemeEditor:" id="fqh-xw-wx9"/>
                         <segue destination="TJu-OU-6MZ" kind="unwind" identifier="unwindMemeEditorToCollectionView" unwindAction="unwindMemeEditorToCollection:" id="eeB-MM-7qc"/>
                     </connections>
