@@ -180,8 +180,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="125" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1dT-FO-bXw">
-                                            <rect key="frame" x="-42" y="25" width="240" height="128"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1dT-FO-bXw">
+                                            <rect key="frame" x="0.0" y="2" width="125" height="130"/>
                                             <animations/>
                                         </imageView>
                                     </subviews>
@@ -232,8 +232,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="127.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-K9-hy1">
-                                            <rect key="frame" x="8" y="0.0" width="240" height="128"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-K9-hy1">
+                                            <rect key="frame" x="8" y="0.0" width="127" height="127.5"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="70" id="XaR-FM-bOA"/>
@@ -315,7 +315,7 @@
         <image name="Table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="izd-gf-xJS"/>
-        <segue reference="lBx-E7-uaX"/>
+        <segue reference="8e7-vi-1Ma"/>
+        <segue reference="HJs-U6-Oau"/>
     </inferredMetricsTieBreakers>
 </document>

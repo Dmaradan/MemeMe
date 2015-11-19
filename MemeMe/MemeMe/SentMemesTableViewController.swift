@@ -29,11 +29,6 @@ class SentMemesTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -41,7 +36,6 @@ class SentMemesTableViewController: UITableViewController {
         
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MemeTableViewCell
 

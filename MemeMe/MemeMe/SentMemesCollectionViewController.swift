@@ -22,7 +22,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         let space : CGFloat = 3.0
         
         // Ensure layout works for multiple screen sizes
-        let dimension = (self.view.frame.size.width - (2 * space)) / 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
         
         flowLayout.minimumLineSpacing = space
         flowLayout.minimumInteritemSpacing = space
@@ -31,6 +31,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         collectionView!.reloadData()
     }
     

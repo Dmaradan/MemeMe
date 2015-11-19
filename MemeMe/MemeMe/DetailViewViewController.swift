@@ -14,12 +14,6 @@ class DetailViewViewController: UIViewController {
 
     @IBOutlet weak var detailView: UIImageView!
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
     override func viewWillAppear(animated: Bool) {
         
         detailView.image = meme.memedImage
