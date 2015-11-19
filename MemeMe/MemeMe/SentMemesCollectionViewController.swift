@@ -18,8 +18,6 @@ class SentMemesCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.leftBarButtonItem = editButtonItem()
 
         let space : CGFloat = 3.0
         

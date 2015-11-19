@@ -17,7 +17,6 @@ class SentMemesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = editButtonItem()
-
     }
     
     
