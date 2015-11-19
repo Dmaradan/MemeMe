@@ -13,7 +13,6 @@ class SentMemesCollectionViewController: UICollectionViewController {
     
     let reuseIdentifier = "MemeCollectionViewCell"
     
-    
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
 
     override func viewDidLoad() {
