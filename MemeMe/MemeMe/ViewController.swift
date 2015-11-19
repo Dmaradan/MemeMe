@@ -67,7 +67,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    
     //MARK: Globals
     
     let memeTextAttributes = [
@@ -77,9 +76,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSStrokeWidthAttributeName : -3.0
     ]
     
-    
     //MARK: Button actions
-    
     
     @IBAction func pickAnImageFromAlbum(sender: AnyObject) {
         
@@ -212,7 +209,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return memedImage
     }
     
-    
     func hideBars(toggle: Bool) {
         
         navigationController?.navigationBarHidden = toggle
@@ -228,8 +224,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Store it in array
         SentMemes.add(meme)
-        
-        
     }
 }
 

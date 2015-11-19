@@ -18,7 +18,7 @@ struct Meme {
 
 struct SentMemes {
     
-        /* Get all memes from our app delegate */
+        /* Get all meme data from our app delegate */ 
     static var allMemes: [Meme] {
         return getMemeArray().memes
     }
