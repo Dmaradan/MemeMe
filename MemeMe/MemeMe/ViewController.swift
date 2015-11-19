@@ -201,9 +201,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func save() {
         
+        // TODO: hide nav and tool bars before saving
+        
         // Create the meme
         let memedImage = generateMemedImage()
-        var meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imagePickerView.image!, newImage: memedImage)
+        var meme = Meme(top: topText.text!, bottom: bottomText.text!, image: imagePickerView.image!, memedImage: memedImage)
         
         // Add it to the memes array in the Application Delegate
         let object = UIApplication.sharedApplication().delegate
