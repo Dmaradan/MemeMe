@@ -12,8 +12,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var originVC: String!
     
-    var userEditing = false
-    
     //MARK: Outlets
     
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -59,14 +57,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let texts = [topText, bottomText]
         
-        if userEditing == false {
-            
-            topText.text = "TOP"
-            bottomText.text = "BOTTOM"
-        }
+        topText.text = "TOP"
+        bottomText.text = "BOTTOM"
         
         for text in texts {
-            
             text.delegate = self
             text.textAlignment = .Center
             text.defaultTextAttributes = memeTextAttributes

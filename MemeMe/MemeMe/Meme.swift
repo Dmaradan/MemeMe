@@ -31,4 +31,8 @@ struct SentMemes {
     static func add(meme: Meme) {
         getMemeArray().memes.append(meme)
     }
+    
+    static func delete(atIndex index: Int) {
+        getMemeArray().memes.removeAtIndex(index)
+    }
 }
